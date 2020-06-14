@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Zilla Slab", serif;
+    background-color: #060c21;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+    color: #fff;
+    background-color: #060c21;
+    box-sizing: border-box;
+}
+
+.box:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+}
+
+.box:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box:before,
+.box:after {
+    background: linear-gradient(135deg, #89ff00, #060c21, #00bcd4);
+}
